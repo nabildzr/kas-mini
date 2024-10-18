@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp(const MainApp());
 }
@@ -11,10 +12,15 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+          body: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  // START HERE FOR TEST
+                ],
+              ))),
     );
   }
 }
+
+
