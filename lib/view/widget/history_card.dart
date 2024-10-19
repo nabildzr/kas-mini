@@ -28,7 +28,7 @@ class HistoryCard extends StatelessWidget {
                 icon,
                 size: 56.43,
               ),
-              Gap(2),
+              const Gap(2),
               Text(
                 title,
                 style: const TextStyle(
