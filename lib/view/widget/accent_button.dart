@@ -21,14 +21,17 @@ class AccentButton extends StatelessWidget {
         backgroundColor: Colors.white,
         side: BorderSide(color: Colors.purple[200]!, width: 2),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(12),
         ),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
       ),
       // Button text
-      child: Text(
-        text,
-        style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 30, right: 30),
+        child: Text(
+          text,
+          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }

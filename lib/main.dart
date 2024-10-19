@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 
-
 void main() {
   runApp(const MainApp());
 }
@@ -11,7 +10,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
           body: Padding(
               padding: EdgeInsets.all(16.0),
