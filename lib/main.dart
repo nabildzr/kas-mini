@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/view/page/login.dart';
-
-
-
 
 
 void main() {
@@ -14,8 +10,18 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LoginPage(
-      
+    return MaterialApp(
+      home: Scaffold(
+        body: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              // START HERE FOR TEST
+              
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -13,7 +13,9 @@ class AccentButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return AspectRatio(aspectRatio: 14 / 2,
+    child: 
+    ElevatedButton(
       // Set the action or function when this button is pressed
       onPressed: onPressed,
       // Button style
@@ -34,6 +36,6 @@ class AccentButton extends StatelessWidget {
           style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
         ),
       ),
-    );
+    ));
   }
 }
