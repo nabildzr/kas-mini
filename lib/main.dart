@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+// import 'package:kas_mini_flutter_app/view/widget/accent_button.dart';
 
 void main() {
   runApp(const MainApp());
@@ -17,10 +17,9 @@ class MainApp extends StatelessWidget {
               child: Column(
                 children: [
                   // START HERE FOR TEST
+                  
                 ],
               ))),
     );
   }
 }
-
-
