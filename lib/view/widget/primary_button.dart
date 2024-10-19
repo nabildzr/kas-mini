@@ -9,7 +9,7 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 14 / 2,
+    return AspectRatio(aspectRatio: 16 / 2,
     child: 
     ElevatedButton(
       style: ElevatedButton.styleFrom(
@@ -18,7 +18,7 @@ class PrimaryButton extends StatelessWidget {
         ),
         backgroundColor: primaryColor
       ),
-      onPressed: onPressed, child: Text(text, style: TextStyle(color: Colors.white),),
+      onPressed: onPressed, child: Text(text, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
     ));
   }
 }

@@ -13,7 +13,7 @@ class AccentButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 14 / 2,
+    return AspectRatio(aspectRatio: 16 / 2,
     child: 
     ElevatedButton(
       // Set the action or function when this button is pressed
@@ -22,7 +22,7 @@ class AccentButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         foregroundColor: primaryColor,
         backgroundColor: Colors.white,
-        side: BorderSide(color: primaryColor, width: 2),
+        side: const BorderSide(color: primaryColor, width: 2),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),

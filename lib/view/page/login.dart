@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:kas_mini_flutter_app/utils/colors.dart';
 import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
+import 'package:kas_mini_flutter_app/view/widget/primary_button.dart';
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -10,12 +13,14 @@ class LoginPage extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: const LoginScreen(),
     );
   }
 }
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -37,11 +42,11 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24.0),
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(6.0),
                 child: Text(
                   'LOGIN',
@@ -52,13 +57,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(height: 35),
-              SizedBox(height: 16),
+              const SizedBox(height: 35),
+              const SizedBox(height: 16),
               Padding(
                 padding: const EdgeInsets.only(top: 24),
                 child: RichText(
                   textAlign: TextAlign.center,
-                  text: TextSpan(
+                  text: const TextSpan(
                     style: TextStyle(
                         fontSize: 32,
                         color: Colors.black,
@@ -80,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Container(
                 height: 100,
                 width: 100,
@@ -88,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   color: primaryColor,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
                     'logo',
                     style: TextStyle(
@@ -98,8 +103,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 40),
-              Row(mainAxisAlignment: MainAxisAlignment.start,
+              const SizedBox(height: 40),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     'Masuk ke akun Anda',
@@ -108,64 +114,58 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               CustomTextField(
                 obscureText: false,
                 height: 50,
                 hintText: 'Email',
-                prefixIcon: Icon(Icons.email_outlined),
+                prefixIcon: const Icon(Icons.email_outlined),
                 controller: _emailController,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               CustomTextField(
                 obscureText: true,
                 height: 50,
                 hintText: 'Password',
-                prefixIcon: Icon(Icons.lock_outline),
+                prefixIcon: const Icon(Icons.lock_outline),
                 controller: _passwordController,
               ),
-              SizedBox(height: 24),
-              AspectRatio(aspectRatio: 8 / 1,
-              child: 
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5)
-                  )
-                ),
-                 child: Padding(
-                   padding:  EdgeInsets.all(2),
-                   child: Text('LOGIN', style: TextStyle(color: Colors.white),),
-                 ),
-                 onPressed: () {
-                   // Implementasi logika login di sini
-                 },
-                
-              ),
-              ),
-              SizedBox(height: 16),
-                Center(
-                    child: Container(
-                    padding: EdgeInsets.only(top: 4),
-                    decoration: BoxDecoration(
+              const SizedBox(height: 24),
+              PrimaryButton(
+                  text: 'Login',
+                  onPressed: () {
+                    print('button pressed');
+                  }),
+              const SizedBox(height: 16),
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.only(top: 4),
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Row(
+                  ),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                    Text('Belum punya akun? ', style: TextStyle(color: Colors.grey), ),
-                    TextButton(
-                    onPressed: () {
-            // Aksi/function ketika tombol ditekan
-                    },
-                child: Text('Daftar sekarang', style: TextStyle(color: Colors.blue[400], fontWeight: FontWeight.bold),),
-        ),
-      ],
-    ),
-  ),
-)
+                      const Text(
+                        'Belum punya akun? ',
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          // Aksi/function ketika tombol ditekan
+                        },
+                        child: Text(
+                          'Daftar sekarang',
+                          style: TextStyle(
+                              color: Colors.blue[400],
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
