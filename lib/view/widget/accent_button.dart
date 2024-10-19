@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kas_mini_flutter_app/utils/colors.dart';
 
 class AccentButton extends StatelessWidget {
   final String text;
@@ -17,9 +18,9 @@ class AccentButton extends StatelessWidget {
       onPressed: onPressed,
       // Button style
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.purple[200],
+        foregroundColor: primaryColor,
         backgroundColor: Colors.white,
-        side: BorderSide(color: Colors.purple[200]!, width: 2),
+        side: BorderSide(color: primaryColor, width: 2),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kas_mini_flutter_app/utils/colors.dart';
 import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
 
 class LoginPage extends StatelessWidget {
@@ -51,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 35),
               SizedBox(height: 16),
               Padding(
                 padding: const EdgeInsets.only(top: 24),
@@ -68,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       TextSpan(
                         text: 'EazieKas\n',
                         style: TextStyle(
-                          color: Colors.purple,
+                          color: primaryColor,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -84,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 100,
                 width: 100,
                 decoration: BoxDecoration(
-                  color: Colors.purple,
+                  color: primaryColor,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Center(
@@ -124,19 +125,47 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: _passwordController,
               ),
               SizedBox(height: 24),
+              AspectRatio(aspectRatio: 8 / 1,
+              child: 
               ElevatedButton(
-                 child: Text('LOGIN'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5)
+                  )
+                ),
+                 child: Padding(
+                   padding:  EdgeInsets.all(2),
+                   child: Text('LOGIN', style: TextStyle(color: Colors.white),),
+                 ),
                  onPressed: () {
                    // Implementasi logika login di sini
                  },
-                 style: ElevatedButton.styleFrom(
-                   padding: EdgeInsets.symmetric(vertical: 16),
-                   foregroundColor: Colors.purple,
-                 ),
+                
+              ),
               ),
               SizedBox(height: 16),
-                RichText(text: TextSpan(
-                ))
+                Center(
+                    child: Container(
+                    padding: EdgeInsets.only(top: 4),
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                    Text('Belum punya akun? ', style: TextStyle(color: Colors.grey), ),
+                    TextButton(
+                    onPressed: () {
+            // Aksi/function ketika tombol ditekan
+                    },
+                child: Text('Daftar sekarang', style: TextStyle(color: Colors.blue[400], fontWeight: FontWeight.bold),),
+        ),
+      ],
+    ),
+  ),
+)
             ],
           ),
         ),
