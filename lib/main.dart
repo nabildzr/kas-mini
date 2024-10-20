@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/view/page/login.dart';
+import 'package:kas_mini_flutter_app/view/page/setting.dart';
+
 
 
 void main() {
@@ -11,7 +12,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LoginPage(
+    return SettingPage(
       
     );
   }

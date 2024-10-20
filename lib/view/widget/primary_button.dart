@@ -11,14 +11,16 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(aspectRatio: 16 / 2,
     child: 
-    ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8)
+    SizedBox(width: double.infinity,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8)
+          ),
+          backgroundColor: primaryColor
         ),
-        backgroundColor: primaryColor
+        onPressed: onPressed, child: Text(text, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
       ),
-      onPressed: onPressed, child: Text(text, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
     ));
   }
 }
