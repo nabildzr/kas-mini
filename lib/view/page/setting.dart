@@ -104,7 +104,6 @@ class _SettingScreenState extends State<SettingScreen> {
               Gap(10),
               CustomTextField(
                 obscureText: false,
-                height: 50,
                 hintText: '',
                 prefixIcon: null,
                 controller: _emailController,
@@ -123,23 +122,21 @@ class _SettingScreenState extends State<SettingScreen> {
               Gap(10),
               CustomTextField(
                 obscureText: false,
-                height: 50,
                 hintText: '',
                 prefixIcon: null,
                 controller: _passwordController,
+                maxLines: 4,
               ),
               Gap(10),
-              Positioned(
-                bottom: 0,
-                child: Column(mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    PrimaryButton(
-                        text: 'SIMPAN',
-                        onPressed: () {
-                          print('button pressed');
-                        }),
-                  ],
-                ),
+              // use this Gap widget to give space between the text field and the button
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 24),
+                child: PrimaryButton(
+                    text: 'SIMPAN',
+                    onPressed: () {
+                      print('button pressed');
+                    }),
               )
             ],
           ),

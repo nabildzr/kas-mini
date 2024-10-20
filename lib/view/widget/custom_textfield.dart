@@ -21,9 +21,6 @@ class CustomTextField extends StatelessWidget {
   //   prefixIcon: null,
   //  )
 
-  // Customize the height of the TextField
-  final double height;
-
   // prefixIcon for the TextField
   // Icon? means that the value can be an Icon or null
 
@@ -37,59 +34,56 @@ class CustomTextField extends StatelessWidget {
   // boolean to determine whether the input text is obscured or not
   final bool obscureText;
 
+  // maxLines for the TextField
+  final int? maxLines;
 
   final TextEditingController controller;
 
   const CustomTextField({
     super.key,
     required this.obscureText,
-    required this.height,
     required this.hintText,
     required this.prefixIcon,
-    required this.controller,
+    required this.controller, this.maxLines,
   });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      // Customize the size of the TextField
-      // with double.infinity that will make the
-      // TextField fill the width of the screen
-      width: double.infinity,
-      height: height,
-      // Create a TextField
+    return TextField(
+      controller: controller,
+      // Decoration for the TextField
+      decoration: InputDecoration(
+        // filled must be true to fill the TextField with fillColor
+        filled: true,
+        fillColor: Colors.grey[200],
 
-      child: TextField(
-        controller: controller,
-        // Decoration for the TextField
-        decoration: InputDecoration(
-          // filled must be true to fill the TextField with fillColor
-          filled: true,
-          fillColor: Colors.grey[200],
+        // Add a hint text (placeholder)
+        hintText: hintText,
+        hintStyle: const TextStyle(fontSize: 17),
 
-          // Add a hint text (placeholder)
-          hintText: hintText,
-          hintStyle: const TextStyle(fontSize: 17),
+        // Add a prefix icon (icon on the left side of the TextField)
+        prefixIcon: prefixIcon,
 
-          prefixIcon: prefixIcon,
+        
 
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.0),
-              // set border to none
-              borderSide: BorderSide.none),
+        border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            // set border to none
+            borderSide: BorderSide.none),
 
-          // If the Input is focused (clicked), the border color and border radius will change
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12.0),
-            borderSide: const BorderSide(
-              // this color is from /utils/colors.dart
-              color: primaryColor,
-            ),
+        // If the Input is focused (clicked), the border color and border radius will change
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12.0),
+          borderSide: const BorderSide(
+            // this color is from /utils/colors.dart
+            color: primaryColor,
           ),
         ),
-        // secure the text input
-        obscureText: obscureText,
       ),
+      // secure the text input
+      obscureText: obscureText,
+      // set the height of the TextField
+      maxLines: maxLines,
     );
   }
 }

@@ -117,18 +117,18 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 16),
               CustomTextField(
                 obscureText: false,
-                height: 50,
                 hintText: 'Email',
                 prefixIcon: const Icon(Icons.email_outlined),
                 controller: _emailController,
+                maxLines: 1,
               ),
               const SizedBox(height: 16),
               CustomTextField(
                 obscureText: true,
-                height: 50,
                 hintText: 'Password',
                 prefixIcon: const Icon(Icons.lock_outline),
                 controller: _passwordController,
+                maxLines: 1,
               ),
               const SizedBox(height: 24),
               PrimaryButton(
