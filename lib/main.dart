@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kas_mini_flutter_app/view/page/login.dart';
-
+import 'package:kas_mini_flutter_app/view/page/splash_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,8 +11,8 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LoginPage(
-      
+    return const MaterialApp(
+      home:  SplashScreen(),
     );
   }
 }

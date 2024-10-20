@@ -37,14 +37,16 @@ class CustomTextField extends StatelessWidget {
   // boolean to determine whether the input text is obscured or not
   final bool obscureText;
 
-    final TextEditingController controller;
+
+  final TextEditingController controller;
 
   const CustomTextField({
     super.key,
     required this.obscureText,
     required this.height,
     required this.hintText,
-    required this.prefixIcon, required this.controller,
+    required this.prefixIcon,
+    required this.controller,
   });
 
   @override
