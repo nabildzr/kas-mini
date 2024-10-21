@@ -11,7 +11,7 @@ class _CardproductState extends State<CardCategory> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      // debugShowCheckedModeBanner: false,
       home: Scaffold(
         
         body: Center(
