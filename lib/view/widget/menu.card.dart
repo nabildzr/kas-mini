@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CategoryCard extends StatefulWidget {
-  const CategoryCard({super.key});
+class CardMenu extends StatefulWidget {
+  const CardMenu({super.key});
 
   @override
-  State<CategoryCard> createState() => _CategoryCardState();
+  State<CardMenu> createState() => _CardproductState();
 }
 
-class _CategoryCardState extends State<CategoryCard> {
+class _CardproductState extends State<CardMenu> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,10 +25,10 @@ class _CategoryCardState extends State<CategoryCard> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(
-                      Icons.category,
+                      Icons.menu_open_rounded,
                       size: 50,
                     ),
-                    Text("Category")
+                    Text("Menu")
                   ],
                 ),
               ),
