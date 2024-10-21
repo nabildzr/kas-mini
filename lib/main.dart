@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kas_mini_flutter_app/view/page/home.dart';
 import 'package:kas_mini_flutter_app/view/page/login.dart';
+import 'package:kas_mini_flutter_app/view/page/product.dart';
 import 'package:kas_mini_flutter_app/view/page/setting.dart';
 import 'package:kas_mini_flutter_app/view/page/splash_screen.dart';
 import 'package:kas_mini_flutter_app/view/widget/product_card.dart';
@@ -16,30 +17,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          body: Padding(
-            padding: EdgeInsets.all(20),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    ProductCard(
-                      productImage: 'assets/products/image.png',
-                      productPrice: 'Aww',
-                      productCategory: 'Aww',
-                      productName: 'Aww',
-                    ),
-                    ProductCard(
-                      productImage: 'assets/products/image.png',
-                      productPrice: 'Aww',
-                      productCategory: 'Aww',
-                      productName: 'Aww',
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-        ));
+        home: ProductPage()
+        );
   }
 }
