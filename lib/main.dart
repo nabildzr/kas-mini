@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kas_mini_flutter_app/view/page/home.dart';
 import 'package:kas_mini_flutter_app/view/page/login.dart';
 import 'package:kas_mini_flutter_app/view/page/setting.dart';
 import 'package:kas_mini_flutter_app/view/page/splash_screen.dart';
@@ -13,7 +14,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home:  SettingPage(),
+      debugShowCheckedModeBanner: false,
+      home:  Home(),
     );
   }
 }

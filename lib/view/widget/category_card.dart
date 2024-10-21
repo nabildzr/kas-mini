@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CardCategory extends StatefulWidget {
-  const CardCategory({super.key});
+class CategoryCard extends StatefulWidget {
+  const CategoryCard({super.key});
 
   @override
-  State<CardCategory> createState() => _CardproductState();
+  State<CategoryCard> createState() => _CategoryCardState();
 }
 
-class _CardproductState extends State<CardCategory> {
+class _CategoryCardState extends State<CategoryCard> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
