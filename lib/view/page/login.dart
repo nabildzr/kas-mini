@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kas_mini_flutter_app/utils/colors.dart';
 import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
+import 'package:kas_mini_flutter_app/view/widget/page_title.dart';
 import 'package:kas_mini_flutter_app/view/widget/primary_button.dart';
 
 class LoginPage extends StatelessWidget {
@@ -46,17 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Padding(
-                padding: EdgeInsets.all(6.0),
-                child: Text(
-                  'LOGIN',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              PageTitle(title: "LOGIN"),
               const SizedBox(height: 35),
               const SizedBox(height: 16),
               Padding(

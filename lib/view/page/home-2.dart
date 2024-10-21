@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:kas_mini_flutter_app/utils/colors.dart';
 import 'package:kas_mini_flutter_app/view/page/setting.dart';
-import 'package:kas_mini_flutter_app/view/widget/category_card.dart';
+import 'package:kas_mini_flutter_app/view/widget/home_category_card.dart';
 import 'package:kas_mini_flutter_app/view/widget/home_card.dart';
-import 'package:kas_mini_flutter_app/view/widget/product_card.dart';
+import 'package:kas_mini_flutter_app/view/widget/home_product_card.dart';
+import 'package:kas_mini_flutter_app/view/widget/page_title.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -21,9 +22,11 @@ class _HomeState extends State<Home> {
         children: [
           Column(
             children: [
+                       const  PageTitle(title: "LOGIN"),
+
               Padding(
                 padding:
-                    EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 10),
+                   const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -37,8 +40,8 @@ class _HomeState extends State<Home> {
                             borderRadius: BorderRadius.circular(50),
                           ),
                         ),
-                        Gap(10),
-                        Column(
+                    const    Gap(10),
+                    const    Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
@@ -56,7 +59,7 @@ class _HomeState extends State<Home> {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (_) => const SettingPage()));
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.settings_applications_rounded,
                         size: 50,
                       ),
@@ -65,15 +68,15 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Padding(
-                  padding: EdgeInsets.only(right: 20, left: 20, bottom: 20),
+                  padding: const EdgeInsets.only(right: 20, left: 20, bottom: 20),
                   child: Container(
                     width: double.infinity,
                     height: 105,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: primaryColor,
                         borderRadius: BorderRadius.circular(20)),
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -167,7 +170,7 @@ class _HomeState extends State<Home> {
             left: 10,
             child: FloatingActionButton(
               onPressed: () {},
-              shape: CircleBorder(),
+              shape: const CircleBorder(),
               backgroundColor:
                   secondaryColor, // Ganti dengan warna yang diinginkan
               child: const Icon(Icons.add, color: Colors.white),
