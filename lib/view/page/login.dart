@@ -141,7 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   widthPercent: 0.9,
                   text: 'Login',
                   onPressed: () {
-                    Navigator.push(context,
+                    Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (_) => const Home()));
                   }),
               Gap(5),
