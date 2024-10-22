@@ -35,6 +35,8 @@ class _AddProductPageState extends State<AddProductPage> {
                     children: [
                       // Input field
                       CustomTextField(
+                        maxLines: null,
+                        suffixIcon: null,
                         obscureText: false,
                         hintText: 'Nama Produk',
                         prefixIcon: Icon(Icons.email_outlined), // Icon on the left
@@ -42,6 +44,8 @@ class _AddProductPageState extends State<AddProductPage> {
                       ),
                       Gap(20), // Space between fields
                       CustomTextField(
+                        maxLines: null,
+                        suffixIcon: null,
                         obscureText: false,
                         hintText: 'Kategori',
                         prefixIcon: Icon(Icons.description),
@@ -49,6 +53,8 @@ class _AddProductPageState extends State<AddProductPage> {
                       ),
                       Gap(20), 
                       CustomTextField(
+                        maxLines: null,
+                        suffixIcon: null,
                         obscureText: false,
                         hintText: 'Harga',
                         prefixIcon: Icon(Icons.money), 
@@ -56,6 +62,7 @@ class _AddProductPageState extends State<AddProductPage> {
                       ),
                       Gap(20),
                       CustomTextField(
+                        maxLines: null,
                         obscureText: false,
                         hintText: 'Status Produk',
                         suffixIcon: Icon(Icons.keyboard_arrow_down), // Down arrow icon on the right

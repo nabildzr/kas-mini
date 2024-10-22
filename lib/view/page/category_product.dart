@@ -38,12 +38,15 @@ class _CategoryProductPageState extends State<CategoryProductPage> {
                     child: Column(
                       children: [
                         CustomTextField(
+                            suffixIcon: null,
+                            maxLines: null,
                             obscureText: false,
                             hintText: "Nama Kategori",
                             prefixIcon: Icon(Icons.email),
                             controller: null),
                         Gap(14),
                         PrimaryButton(
+                            widthPercent: 1.0,
                             text: "SIMPAN",
                             onPressed: () {
                               print("Simpan");

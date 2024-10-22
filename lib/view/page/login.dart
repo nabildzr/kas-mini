@@ -117,6 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Gap(10),
               // Email input field
               CustomTextField(
+                suffixIcon: null,
                 obscureText: false,
                 hintText: 'Email ',
                 prefixIcon: const Icon(Icons.email_outlined),
@@ -126,6 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Gap(10),
               // Password input field
               CustomTextField(
+                suffixIcon: null,
                 obscureText: true,
                 hintText: 'Password',
                 prefixIcon: const Icon(Icons.lock_outline),

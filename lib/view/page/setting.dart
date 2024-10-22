@@ -95,6 +95,9 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               Gap(10),
               CustomTextField(
+                maxLines: null,
+
+                suffixIcon: null,
                 obscureText: false,
                 hintText: '',
                 prefixIcon: null,
@@ -113,6 +116,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               Gap(10),
               CustomTextField(
+                suffixIcon: null,
                 obscureText: false,
                 hintText: '',
                 prefixIcon: null,
