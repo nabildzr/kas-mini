@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:kas_mini_flutter_app/model/product.dart';
 import 'package:kas_mini_flutter_app/utils/colors.dart';
 import 'package:kas_mini_flutter_app/view/widget/category_product.dart';
 import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
@@ -23,6 +24,7 @@ class _CategoryProductPageState extends State<CategoryProductPage> {
           child: Column(
             children: [
               const PageTitle(title: "KATEGORI"),
+              Gap(20),
               Container(
                 height: 155,
                 width: double.infinity,
@@ -35,6 +37,7 @@ class _CategoryProductPageState extends State<CategoryProductPage> {
                       right: 12,
                       left: 12,
                     ),
+                    
                     child: Column(
                       children: [
                         CustomTextField(
@@ -55,43 +58,22 @@ class _CategoryProductPageState extends State<CategoryProductPage> {
                     )),
               ),
               const Gap(20),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text("Kategori Produk"),
-                  CategoryProduct(
-                      productCategory: "Kebutuhan Rumah Tangga",
-                      onTapEdit: () {
-                        print("waw");
-                      },
-                      onTapDelete: () {
-                        print("waw");
-                      }),
-                  CategoryProduct(
-                      productCategory: "Kebutuhan Rumah Tangga",
-                      onTapEdit: () {
-                        print("waw");
-                      },
-                      onTapDelete: () {
-                        print("waw");
-                      }),
-                  CategoryProduct(
-                      productCategory: "Kebutuhan Rumah Tangga",
-                      onTapEdit: () {
-                        print("waw");
-                      },
-                      onTapDelete: () {
-                        print("waw");
-                      }),
-                  CategoryProduct(
-                      productCategory: "Kebutuhan Rumah Tangga",
-                      onTapEdit: () {
-                        print("waw");
-                      },
-                      onTapDelete: () {
-                        print("waw");
-                      }),
-                ],
+              const Row(
+                children: [Text("Kategori Product")],
+              ),
+              Expanded(
+                child: ListView.builder(
+                    itemCount: itemProduct.length,
+                    itemBuilder: (context, index) {
+                      return CategoryProduct(
+                          productCategory: itemProduct[index].productCategory,
+                          onTapEdit: () {
+                            print("waw");
+                          },
+                          onTapDelete: () {
+                            print("waw");
+                          });
+                    }),
               )
             ],
           ),

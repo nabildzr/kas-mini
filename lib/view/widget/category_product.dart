@@ -17,7 +17,7 @@ class CategoryProduct extends StatelessWidget {
       padding: EdgeInsets.only(bottom: 5, left: 5, right: 5, top: 5),
       decoration: BoxDecoration(
           border: Border(
-              bottom: BorderSide(color: Colors.grey.shade400, width: 1))),
+              bottom: BorderSide(color: Colors.grey.shade500, width: 1))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -26,10 +26,10 @@ class CategoryProduct extends StatelessWidget {
             children: [
               GestureDetector(
                   onTap: onTapEdit,
-                  child: Icon(Icons.edit, color: Colors.grey.shade400)),
+                  child: Icon(Icons.edit, color: Colors.grey.shade500)),
               GestureDetector(
                   onTap: onTapDelete,
-                  child: Icon(Icons.delete, color: Colors.grey.shade400))
+                  child: Icon(Icons.delete, color: Colors.grey.shade500))
             ],
           )
         ],
