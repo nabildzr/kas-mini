@@ -20,63 +20,65 @@ class _CategoryProductPageState extends State<CategoryProductPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: greyColor,
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              const PageTitle(title: "KATEGORI"),
-              const Gap(20),
-              Container(
-                height: 155,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white),
-                child: Padding(
-                    padding: const EdgeInsets.only(
-                      top: 26,
-                      right: 12,
-                      left: 12,
-                    ),
-                    
-                    child: Column(
-                      children: [
-                        const CustomTextField(
-                            suffixIcon: null,
-                            maxLines: null,
-                            obscureText: false,
-                            hintText: "Nama Kategori",
-                            prefixIcon: Icon(Icons.email),
-                            controller: null),
-                        const Gap(14),
-                        PrimaryButton(
-                            widthPercent: 1.0,
-                            text: "SIMPAN",
-                            onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (_) => const Home()));
-                            })
-                      ],
-                    )),
-              ),
-              const Gap(20),
-              const Row(
-                children: [Text("Kategori Product")],
-              ),
-              Expanded(
-                child: ListView.builder(
-                    itemCount: itemProduct.length,
-                    itemBuilder: (context, index) {
-                      return CategoryProduct(
-                          productCategory: itemProduct[index].productCategory,
-                          onTapEdit: () {
-                            print("waw");
-                          },
-                          onTapDelete: () {
-                            print("waw");
-                          });
-                    }),
-              )
-            ],
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                const PageTitle(title: "KATEGORI"),
+                const Gap(20),
+                Container(
+                  height: 155,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white),
+                  child: Padding(
+                      padding: const EdgeInsets.only(
+                        top: 26,
+                        right: 12,
+                        left: 12,
+                      ),
+                      
+                      child: Column(
+                        children: [
+                          const CustomTextField(
+                              suffixIcon: null,
+                              maxLines: null,
+                              obscureText: false,
+                              hintText: "Nama Kategori",
+                              prefixIcon: Icon(Icons.email),
+                              controller: null),
+                          const Gap(14),
+                          PrimaryButton(
+                              widthPercent: 1.0,
+                              text: "SIMPAN",
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (_) => const Home()));
+                              })
+                        ],
+                      )),
+                ),
+                const Gap(20),
+                const Row(
+                  children: [Text("Kategori Product")],
+                ),
+                Expanded(
+                  child: ListView.builder(
+                      itemCount: itemProduct.length,
+                      itemBuilder: (context, index) {
+                        return CategoryProduct(
+                            productCategory: itemProduct[index].productCategory,
+                            onTapEdit: () {
+                              print("waw");
+                            },
+                            onTapDelete: () {
+                              print("waw");
+                            });
+                      }),
+                )
+              ],
+            ),
           ),
         ));
   }

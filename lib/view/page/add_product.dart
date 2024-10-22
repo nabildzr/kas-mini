@@ -20,72 +20,74 @@ class _AddProductPageState extends State<AddProductPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.all(16.0), // Add padding around the content
-        child: Stack(
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start, // Align children to the start
-              children: [
-                const Center(
-                  child: PageTitle(title: "TAMBAH PRODUCT"), // title
-                ),
-                const Gap(50), // Space between title and input fields
-                const Expanded(
-                  child: Column(
-                    children: [
-                      // Input field
-                      CustomTextField(
-                        maxLines: null,
-                        suffixIcon: null,
-                        obscureText: false,
-                        hintText: 'Nama Produk',
-                        prefixIcon: Icon(Icons.email_outlined), // Icon on the left
-                        controller: null, // Controller can be added later for state management
-                      ),
-                      Gap(20), // Space between fields
-                      CustomTextField(
-                        maxLines: null,
-                        suffixIcon: null,
-                        obscureText: false,
-                        hintText: 'Kategori',
-                        prefixIcon: Icon(Icons.description),
-                        controller: null,
-                      ),
-                      Gap(20), 
-                      CustomTextField(
-                        maxLines: null,
-                        suffixIcon: null,
-                        obscureText: false,
-                        hintText: 'Harga',
-                        prefixIcon: Icon(Icons.money), 
-                        controller: null,
-                      ),
-                      Gap(20),
-                      CustomTextField(
-                        maxLines: null,
-                        obscureText: false,
-                        hintText: 'Status Produk',
-                        suffixIcon: Icon(Icons.keyboard_arrow_down), // Down arrow icon on the right
-                        controller: null,
-                        prefixIcon: Icon(Icons.email_outlined),
-                      ),
-                    ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0), // Add padding around the content
+          child: Stack(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start, // Align children to the start
+                children: [
+                  const Center(
+                    child: PageTitle(title: "TAMBAH PRODUCT"), // title
                   ),
-                ),
-                // Primary button at the bottom
-                PrimaryButton(
-                  widthPercent: 0.9,
-                  text: 'SIMPAN', // Text on the button
-                  onPressed: () {
-                    // Define what happens when the button is pressed
-                    // For example, you could validate the input fields and save the data
-                    Navigator.push(context, MaterialPageRoute(builder: (_) => const Home()));
-                  },
-                ),
-              ],
-            ),
-          ],
+                  const Gap(50), // Space between title and input fields
+                  const Expanded(
+                    child: Column(
+                      children: [
+                        // Input field
+                        CustomTextField(
+                          maxLines: null,
+                          suffixIcon: null,
+                          obscureText: false,
+                          hintText: 'Nama Produk',
+                          prefixIcon: Icon(Icons.email_outlined), // Icon on the left
+                          controller: null, // Controller can be added later for state management
+                        ),
+                        Gap(20), // Space between fields
+                        CustomTextField(
+                          maxLines: null,
+                          suffixIcon: null,
+                          obscureText: false,
+                          hintText: 'Kategori',
+                          prefixIcon: Icon(Icons.description),
+                          controller: null,
+                        ),
+                        Gap(20), 
+                        CustomTextField(
+                          maxLines: null,
+                          suffixIcon: null,
+                          obscureText: false,
+                          hintText: 'Harga',
+                          prefixIcon: Icon(Icons.money), 
+                          controller: null,
+                        ),
+                        Gap(20),
+                        CustomTextField(
+                          maxLines: null,
+                          obscureText: false,
+                          hintText: 'Status Produk',
+                          suffixIcon: Icon(Icons.keyboard_arrow_down), // Down arrow icon on the right
+                          controller: null,
+                          prefixIcon: Icon(Icons.email_outlined),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // Primary button at the bottom
+                  PrimaryButton(
+                    widthPercent: 0.9,
+                    text: 'SIMPAN', // Text on the button
+                    onPressed: () {
+                      // Define what happens when the button is pressed
+                      // For example, you could validate the input fields and save the data
+                      Navigator.push(context, MaterialPageRoute(builder: (_) => const Home()));
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

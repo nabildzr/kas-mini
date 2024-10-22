@@ -18,52 +18,54 @@ class _ProductPageState extends State<ProductPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: greyColor,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Stack(
-          children: [
-            Column(
-              children: [
-                const PageTitle(title: "PRODUCT"),
-                Expanded(
-                    child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2),
-                  itemBuilder: (context, index) {
-                    return ZoomTapAnimation(
-                      onTap: () {},
-                      child: ProductCard(
-                        productImage: itemProduct[index].productImage,
-                        productPrice: itemProduct[index].productCategory,
-                        productCategory: itemProduct[index].productCategory,
-                        productName: itemProduct[index].productName,
-                        productStock: itemProduct[index].productStock,
-                      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Stack(
+            children: [
+              Column(
+                children: [
+                  const PageTitle(title: "PRODUCT"),
+                  Expanded(
+                      child: GridView.builder(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2),
+                    itemBuilder: (context, index) {
+                      return ZoomTapAnimation(
+                        onTap: () {},
+                        child: ProductCard(
+                          productImage: itemProduct[index].productImage,
+                          productPrice: itemProduct[index].productCategory,
+                          productCategory: itemProduct[index].productCategory,
+                          productName: itemProduct[index].productName,
+                          productStock: itemProduct[index].productStock,
+                        ),
+                      );
+                    },
+                    itemCount: itemProduct.length,
+                  ))
+                ],
+              ),
+              Positioned(
+                bottom: 20,
+                right: 0,
+                left: 0,
+                child: FloatingActionButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => const AddProductPage())
                     );
                   },
-                  itemCount: itemProduct.length,
-                ))
-              ],
-            ),
-            Positioned(
-              bottom: 20,
-              right: 0,
-              left: 0,
-              child: FloatingActionButton(
-                onPressed: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => const AddProductPage())
-                  );
-                },
-                backgroundColor: secondaryColor,
-                shape: const CircleBorder(),
-                child: const Icon(
-                  Icons.add,
-                  color: Colors.white,
+                  backgroundColor: secondaryColor,
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
