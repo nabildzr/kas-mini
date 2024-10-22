@@ -54,10 +54,9 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Page title widget
               PageTitle(title: "LOGIN"),
-              Gap(15),
-              // Welcome text
+              const SizedBox(height: 35),
+              const SizedBox(height: 16),
               Padding(
                 padding: const EdgeInsets.only(top: 24),
                 child: RichText(

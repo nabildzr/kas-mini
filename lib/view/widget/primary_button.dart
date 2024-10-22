@@ -6,6 +6,7 @@ class PrimaryButton extends StatelessWidget {
   final VoidCallback onPressed;
   final double widthPercent;
 
+
   const PrimaryButton({super.key, required this.text, required this.onPressed, required this.widthPercent});
 
   @override
