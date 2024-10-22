@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:kas_mini_flutter_app/view/page/home-2.dart';
 import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
 import 'package:kas_mini_flutter_app/view/widget/page_title.dart';
 import 'package:kas_mini_flutter_app/view/widget/primary_button.dart';
@@ -79,7 +80,7 @@ class _AddProductPageState extends State<AddProductPage> {
                   onPressed: () {
                     // Define what happens when the button is pressed
                     // For example, you could validate the input fields and save the data
-                    print('Simpan button pressed'); // Temporary action for demonstration
+                    Navigator.push(context, MaterialPageRoute(builder: (_) => const Home()));
                   },
                 ),
               ],

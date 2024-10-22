@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_flutter_app/view/page/home-2.dart';
 import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
 import 'package:kas_mini_flutter_app/view/widget/page_title.dart';
 import 'package:kas_mini_flutter_app/view/widget/primary_button.dart';
@@ -137,11 +138,12 @@ class _LoginScreenState extends State<LoginScreen> {
               Gap(10),
               // Login button
               PrimaryButton(
-                widthPercent: 0.9,
-                text: 'Login',
-                onPressed: () {
-                  print('button pressed');
-                }),
+                  widthPercent: 0.9,
+                  text: 'Login',
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const Home()));
+                  }),
               Gap(5),
               // Register link
               Center(

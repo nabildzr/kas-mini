@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_flutter_app/view/page/home-2.dart';
 import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
 import 'package:kas_mini_flutter_app/view/widget/page_title.dart';
 import 'package:kas_mini_flutter_app/view/widget/primary_button.dart';
@@ -48,15 +49,15 @@ class _SettingScreenState extends State<SettingScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              PageTitle(title: "SETTING"),
+              const PageTitle(title: "SETTING"),
 
               const SizedBox(height: 35),
               const SizedBox(height: 16),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                      padding: const EdgeInsets.only(top: 24),
+                      padding: EdgeInsets.only(top: 24),
                       child: Text(
                         'Logo atau Foto Toko',
                         style: TextStyle(
@@ -93,17 +94,16 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                 ],
               ),
-              Gap(10),
+              const Gap(10),
               CustomTextField(
                 maxLines: null,
-
                 suffixIcon: null,
                 obscureText: false,
                 hintText: '',
                 prefixIcon: null,
                 controller: _emailController,
               ),
-              Gap(10),
+              const Gap(10),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -114,7 +114,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                 ],
               ),
-              Gap(10),
+              const Gap(10),
               CustomTextField(
                 suffixIcon: null,
                 obscureText: false,
@@ -123,16 +123,17 @@ class _SettingScreenState extends State<SettingScreen> {
                 controller: _passwordController,
                 maxLines: 4,
               ),
-              Gap(10),
+              const Gap(10),
               // use this Gap widget to give space between the text field and the button
-              Spacer(),
+              const Spacer(),
               Padding(
                 padding: const EdgeInsets.only(bottom: 24),
                 child: PrimaryButton(
-                  widthPercent: 0.9,
+                    widthPercent: 0.9,
                     text: 'SIMPAN',
                     onPressed: () {
-                      print('button pressed');
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (_) => const Home()));
                     }),
               )
             ],
