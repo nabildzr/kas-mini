@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:kas_mini_flutter_app/utils/colors.dart';
 import 'package:kas_mini_flutter_app/view/page/setting.dart';
-import 'package:kas_mini_flutter_app/view/widget/home_category_card.dart';
 import 'package:kas_mini_flutter_app/view/widget/menu_card.dart';
-import 'package:kas_mini_flutter_app/view/widget/home_product_card.dart';
 import 'package:kas_mini_flutter_app/view/widget/page_title.dart';
 
 class Home extends StatefulWidget {
@@ -18,6 +16,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           Column(

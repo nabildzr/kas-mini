@@ -125,6 +125,7 @@ class _SettingScreenState extends State<SettingScreen> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 24),
                 child: PrimaryButton(
+                  widthPercent: 0.9,
                     text: 'SIMPAN',
                     onPressed: () {
                       print('button pressed');

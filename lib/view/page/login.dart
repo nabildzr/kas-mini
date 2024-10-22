@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:kas_mini_flutter_app/utils/colors.dart';
 import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
 import 'package:kas_mini_flutter_app/view/widget/page_title.dart';
 import 'package:kas_mini_flutter_app/view/widget/primary_button.dart';
 
+// LoginPage widget: The main entry point for the login page
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Returns a MaterialApp with the LoginScreen as the home widget
     return MaterialApp(
       title: 'EazieKas Login',
       theme: ThemeData(
@@ -19,6 +22,7 @@ class LoginPage extends StatelessWidget {
   }
 }
 
+// LoginScreen widget: Stateful widget for the login screen
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -26,12 +30,15 @@ class LoginScreen extends StatefulWidget {
   _LoginScreenState createState() => _LoginScreenState();
 }
 
+// State class for LoginScreen
 class _LoginScreenState extends State<LoginScreen> {
+  // Controllers for email and password text fields
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose() {
+    // Dispose of controllers when the widget is removed from the widget tree
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
@@ -43,13 +50,14 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          padding: const EdgeInsets.symmetric(horizontal: 26.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // Page title widget
               PageTitle(title: "LOGIN"),
-              const SizedBox(height: 35),
-              const SizedBox(height: 16),
+              Gap(15),
+              // Welcome text
               Padding(
                 padding: const EdgeInsets.only(top: 24),
                 child: RichText(
@@ -76,7 +84,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 40),
+              Gap(30),
+              // Logo placeholder
               Container(
                 height: 100,
                 width: 100,
@@ -94,7 +103,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 40),
+              Gap(30),
+              // Login instruction text
               const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -105,15 +115,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 16),
+              Gap(10),
+              // Email input field
               CustomTextField(
                 obscureText: false,
-                hintText: 'Email',
+                hintText: 'Email ',
                 prefixIcon: const Icon(Icons.email_outlined),
                 controller: _emailController,
                 maxLines: 1,
               ),
-              const SizedBox(height: 16),
+              Gap(10),
+              // Password input field
               CustomTextField(
                 obscureText: true,
                 hintText: 'Password',
@@ -121,13 +133,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: _passwordController,
                 maxLines: 1,
               ),
-              const SizedBox(height: 24),
+              Gap(10),
+              // Login button
               PrimaryButton(
-                  text: 'Login',
-                  onPressed: () {
-                    print('button pressed');
-                  }),
-              const SizedBox(height: 16),
+                widthPercent: 0.9,
+                text: 'Login',
+                onPressed: () {
+                  print('button pressed');
+                }),
+              Gap(5),
+              // Register link
               Center(
                 child: Container(
                   padding: const EdgeInsets.only(top: 4),

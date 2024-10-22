@@ -4,14 +4,15 @@ import 'package:kas_mini_flutter_app/utils/colors.dart';
 class PrimaryButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
+  final double widthPercent;
 
-  const PrimaryButton({super.key, required this.text, required this.onPressed});
+  const PrimaryButton({super.key, required this.text, required this.onPressed, required this.widthPercent});
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(aspectRatio: 16 / 2,
     child: 
-    SizedBox(width: double.infinity,
+    SizedBox(width: MediaQuery.of(context).size.width * widthPercent,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
