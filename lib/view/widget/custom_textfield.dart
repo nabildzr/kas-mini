@@ -45,7 +45,9 @@ class CustomTextField extends StatelessWidget {
     required this.obscureText,
     required this.hintText,
     required this.prefixIcon,
-    required this.controller, this.maxLines, this.suffixIcon,
+    required this.controller,
+    required this.maxLines,
+    required this.suffixIcon,
   });
 
   @override
@@ -65,8 +67,6 @@ class CustomTextField extends StatelessWidget {
         // Add a prefix icon (icon on the left side of the TextField)
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-
-        
 
         border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
