@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:kas_mini_flutter_app/model/product.dart';
 import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_flutter_app/view/page/home-2.dart';
 import 'package:kas_mini_flutter_app/view/widget/category_product.dart';
 import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
 import 'package:kas_mini_flutter_app/view/widget/page_title.dart';
@@ -24,7 +25,7 @@ class _CategoryProductPageState extends State<CategoryProductPage> {
           child: Column(
             children: [
               const PageTitle(title: "KATEGORI"),
-              Gap(20),
+              const Gap(20),
               Container(
                 height: 155,
                 width: double.infinity,
@@ -32,7 +33,7 @@ class _CategoryProductPageState extends State<CategoryProductPage> {
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white),
                 child: Padding(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       top: 26,
                       right: 12,
                       left: 12,
@@ -40,19 +41,19 @@ class _CategoryProductPageState extends State<CategoryProductPage> {
                     
                     child: Column(
                       children: [
-                        CustomTextField(
+                        const CustomTextField(
                             suffixIcon: null,
                             maxLines: null,
                             obscureText: false,
                             hintText: "Nama Kategori",
                             prefixIcon: Icon(Icons.email),
                             controller: null),
-                        Gap(14),
+                        const Gap(14),
                         PrimaryButton(
                             widthPercent: 1.0,
                             text: "SIMPAN",
                             onPressed: () {
-                              print("Simpan");
+                              Navigator.push(context, MaterialPageRoute(builder: (_) => const Home()));
                             })
                       ],
                     )),
