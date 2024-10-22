@@ -16,8 +16,11 @@ class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: greyColor,
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 20
+        ),
         child: Stack(
           children: [
             Column(
@@ -32,7 +35,7 @@ class _ProductPageState extends State<ProductPage> {
                           return  ZoomTapAnimation(
                             onTap: () {},
                             child: ProductCard(
-                              productImage: itemProduct[index].productImage,
+                              productImage:  itemProduct[index].productImage,
                               productPrice: itemProduct[index].productCategory,
                               productCategory: itemProduct[index].productCategory,
                               productName: itemProduct[index].productName,

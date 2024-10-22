@@ -27,6 +27,7 @@ class CustomTextField extends StatelessWidget {
   //? note: If the TextField wants to use an Icon then just use the Widget Icon as usual in the prefixIcon argument, then if you don't want to use the prefixIcon then type null in the prefixIcon argument
 
   final Icon? prefixIcon;
+  final Icon? suffixIcon;
 
   // hintText (placeholder) for the TextField
   final String? hintText;
@@ -37,14 +38,14 @@ class CustomTextField extends StatelessWidget {
   // maxLines for the TextField
   final int? maxLines;
 
-  final TextEditingController controller;
+  final TextEditingController? controller;
 
   const CustomTextField({
     super.key,
     required this.obscureText,
     required this.hintText,
     required this.prefixIcon,
-    required this.controller, this.maxLines,
+    required this.controller, this.maxLines, this.suffixIcon,
   });
 
   @override
@@ -63,6 +64,7 @@ class CustomTextField extends StatelessWidget {
 
         // Add a prefix icon (icon on the left side of the TextField)
         prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
 
         
 
