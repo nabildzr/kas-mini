@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              PageTitle(title: "LOGIN"),
+              const PageTitle(title: "LOGIN"),
               const SizedBox(height: 35),
               const SizedBox(height: 16),
               Padding(
